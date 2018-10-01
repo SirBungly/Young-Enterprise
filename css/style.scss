@@ -1,0 +1,386 @@
+$hero-font: 'Abril Fatface', cursive;
+$content-font: 'Montserrat', sans-serif;
+$dark-gray: #202020;
+$darker-gray: #111111;
+$light-gray: #ededed;
+$nav-color: #d1d1d1;
+$about-color: #eeeeee;
+$accent-color: #497b54;
+
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,400,800');
+
+@mixin transform($property) {
+  transform: $property;
+}
+
+.hero-head {
+  color: $light-gray;
+  font-family: $content-font;
+  font-weight: 800;
+  font-size: 50px;
+  margin-bottom: -20px;
+}
+
+.green {
+  color: $accent-color;
+}
+
+.hero-wrapper {
+  margin-left: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.light {
+  font-weight: 100;
+}
+
+.adjust-right {
+  margin-left: -4px;
+}
+
+.adjust-left {
+  margin-left: 2px;
+}
+
+@media (min-width: 500px) {
+
+  .hero-wrapper {
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .hero-wrapper {
+    margin-left: 150px;
+    margin-top: 100px;
+  }
+
+  .hero-head {
+    margin-bottom: -25px;
+    font-size: 60px;
+  }
+
+  .adjust-left {
+    margin-left: 4px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .hero-head {
+    margin-bottom: -38px;
+    font-size: 90px;
+  }
+
+  .adjust-left {
+    margin-left: 6px;
+  }
+
+  .adjust-right {
+    margin-left: -6px;
+  }
+}
+
+.hero {
+  background-image: url("../img/hero-img.jpg");
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(10%);
+  margin: 0 auto;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+@media (min-width: 500px) {
+  .hero {
+    padding-bottom: 90px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding-bottom: 150px;
+  }
+}
+
+.products-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/topography.png");
+  background-size: 300px;
+  padding: 25px 10px;
+}
+
+@media (min-width: 768px) {
+  .products-flex {
+    flex-direction: row;
+  }
+}
+
+.card {
+  width: 70%;
+  margin: 15px;
+  border-radius: 0px !important;
+}
+
+.card-body {
+  padding: 0 !important;
+  text-align: center;
+  color: $dark-gray;
+  transition: box-shadow 1s;
+  filter: grayscale(85%);
+  transition: filter 0.5s;
+}
+
+.card-body:hover {
+  box-shadow: 4px 4px 10px $light-gray;
+  cursor: pointer;
+  filter: grayscale(10%);
+}
+
+.card-title {
+  font-family: $content-font;
+  font-size: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .card-title {
+    font-size: 17px;
+  }
+
+  .card {
+    width: 400px;
+  }
+}
+
+.card-image {
+  background-image: url("../img/chopping-board.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .card-image {
+    height: 200px;
+  }
+}
+
+.candle {
+  background-image: url("../img/candle-holder.jpg");
+}
+
+.coaster {
+  background-image: url("../img/coatser.jpg");
+}
+
+.navbar-align {
+  text-align: center;
+  max-height: 70px;
+}
+
+.navbar-hero {
+  display: inline-block;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: $nav-color;
+  font-family: $content-font;
+  font-weight: 200;
+  font-size: 15px;
+  padding-bottom: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+@media (min-width: 992px) {
+  .navbar-dark .navbar-nav .nav-link {
+    font-size: 20px;
+  }
+}
+
+.navbar-dark:hover .navbar-nav:hover .nav-link:hover {
+  color: $accent-color;
+  border-color: $accent-color;
+}
+
+.nav-border {
+  border-bottom: 1px solid $nav-color;
+}
+
+.section-divider {
+  height: 5px;
+  background-color: $accent-color;
+}
+
+.content-section {
+  background-color: $about-color;
+  padding-top: 70px;
+  color: $dark-gray;
+  padding-bottom: 70px;
+}
+
+.business-section {
+  background-color: $dark-gray;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  color: $light-gray;
+}
+
+.content {
+  position: relative;
+  font-family: $content-font;
+  font-size: 15px;
+}
+
+@media (min-width: 992px) {
+  .content {
+    max-width: 48%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content {
+    max-width: 80%;
+  }
+}
+
+.business-content {
+  text-align: right;
+  max-width: 100%;
+  margin-top: 40px;
+}
+
+@media (min-width: 992px) {
+  .business-content {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .business-content {
+    max-width: 60%;
+  }
+}
+
+.content-head {
+  font-family: $hero-font;
+  font-size: 30px;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  border-left-style: solid;
+  border-color: $accent-color;
+}
+
+@media (min-width: 992px) {
+  .content-head {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .content-head {
+    font-size: 40px;
+    margin-top: -10px;
+  }
+}
+
+.business-head {
+  border-left-style: none;
+  border-right-style: solid;
+  padding-left: 0px;
+  padding-right: 15px;
+  border-color: $accent-color;
+}
+
+.content-btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-style: solid;
+  height: 40px;
+  color: $dark-gray;
+  border-radius: 0;
+  font-family: $content-font;
+}
+
+@media (min-width: 992px) {
+  .content-btn {
+    max-width: 500px;
+  }
+}
+
+.content-btn:hover {
+  background-color: $dark-gray;
+  color: $light-gray;
+}
+
+.content-btn:active {
+  background-color: $darker-gray !important;
+  color: $light-gray !important;
+  box-shadow: none !important;
+}
+
+.content-btns {
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .content-btns {
+    width: 75%;
+    top: 20px;
+    margin-left: 50px;
+  }
+}
+
+.flex-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.business-flex {
+  justify-content: flex-end;
+}
+
+.left-margin {
+  margin-left: 0px;
+  margin-top: 30px;
+}
+
+@media (min-width: 992px) {
+  .flex-section {
+    flex-direction: row;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .left-margin {
+    margin-left: 30px;
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .flex-section {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
