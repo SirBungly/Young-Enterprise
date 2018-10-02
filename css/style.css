@@ -70,6 +70,10 @@
     }
 }
 
+.product-info {
+  display: none;
+}
+
 .hero {
     background-image: url("../img/hero-img.jpg");
     background-position: center;
