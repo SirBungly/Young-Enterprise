@@ -18,8 +18,8 @@ $accent-color: #497b54;
   color: $light-gray;
   font-family: $content-font;
   font-weight: 800;
-  font-size: 50px;
-  margin-bottom: -20px;
+  font-size: 35px;
+  margin-bottom: -15px;
 }
 
 .green {
@@ -50,6 +50,11 @@ $accent-color: #497b54;
     margin-left: 100px;
     margin-top: 50px;
     margin-bottom: 0;
+  }
+
+  .hero-head {
+    font-size: 50px;
+    margin-bottom: -20px;
   }
 
 }
