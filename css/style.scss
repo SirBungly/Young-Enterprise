@@ -99,7 +99,9 @@ $accent-color: #497b54;
 
 #product-info {
   display: none;
-
+  background-image: url("../img/topography.png");
+  background-size: 300px;
+}
 
 @media (min-width: 500px) {
   .hero {

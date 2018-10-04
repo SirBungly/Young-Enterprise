@@ -72,6 +72,8 @@
 
 #product-info {
   display: none;
+  background-image: url("../img/topography.png");
+  background-size: 300px;
 }
 
 .hero {
